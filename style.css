@@ -1,0 +1,101 @@
+body {
+  font-family: 'Nunito',
+  sans-serif;
+}
+.container {
+  position: relative;
+  width: 85vw;
+  margin: 2vh auto;
+}
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+h2 {
+  color: #6c90ac;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+h3 {
+  margin-top: 0;
+}
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 3vh;
+}
+.card {
+  /* 卡片外部 */
+  box-sizing: border-box;
+  flex: 7% 0 1;
+  height: 8vw;
+  border: 2px solid #e0e0e0;
+  margin: 2px;
+  /* 卡片內部 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card img {
+  max-width: 30%;
+  align-self: center;
+}
+.card p {
+  margin: 2px;
+  font-size: 1vmax;
+}
+.card p:last-child {
+  transform: rotate(180deg);
+}
+.back {
+  background: url('https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png');
+  background-size: cover;
+}
+.paired {
+  background-color: #dae0e3;
+}
+.wrong {
+  animation: wrongPaired 0.2s 5;
+}
+
+@keyframes wrongPaired {
+  to {
+    border: 3px solid #ffd54f;
+  }
+}
+.completed {
+  position: absolute;
+  z-index: 999;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: RGBA(232, 246, 254, 0.8);
+  width: 100vw;
+  padding: 3vmin 0;
+}
+.completed p {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0;
+}
+.completed p:first-child {
+  font-size: 3em;
+  font-weight: 700;
+  color: #758d9a;
+}
+#reset-game {
+  position: fixed;
+  top: 8vh;
+  left: 8vw;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #dae0e3;
+  box-shadow: 0px 0px 8px 3px #6c90ac;
+  cursor: pointer;
+}
